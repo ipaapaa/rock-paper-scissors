@@ -94,14 +94,15 @@ function playGame(){
     let computerScore = 0
     let playerScore = 0
     let round = 1
-    console.log("Round: " + round)
+   
+    console.log("Computer: " + computerScore)
+    console.log("Player: " + playerScore)
 
     while (computerScore < 3 && playerScore < 3 ){
-        let result  = playRound()
         console.log("Round: " + round)
-        console.log("Computer: " + computerScore)
-        console.log("Player: " + playerScore)
-        
+        let result  = playRound()
+       
+
         switch (result){
             case 0: 
                 computerScore++
@@ -122,8 +123,13 @@ function playGame(){
 
                 break
         }
+        console.log("Computer: " + computerScore)
+        console.log("Player: " + playerScore)
 
     }
+
+    console.log("Computer: " + computerScore)
+    console.log("Player: " + playerScore)
 
     if (computerScore > playerScore){
         console.log("Computer wins the game!")
