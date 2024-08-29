@@ -4,10 +4,13 @@ function getCompChoice(){
     switch(compChoice){
         case 0: 
             return 'Rock';
+            
         case 1: 
             return 'Paper';
+            
         case 2: 
             return 'Scissors';
+            
     }
    
 }
@@ -21,17 +24,19 @@ function getPlayerChoice(){
     let playerChoice = prompt("Enter your choice [number]:")
     
     
-    switch (playerChoice){
+    
+    switch (parseInt(playerChoice)){
         case 0:
-            return 'Rock'
+            return 'Rock';
         case 1:
-            return 'Paper'
+            return 'Paper';
         case 2:
-            return 'Scissors'
+            return 'Scissors';
         default:
             console.log("Invalid input, please try again.")
 
     }
 
 }
+
 
