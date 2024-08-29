@@ -45,6 +45,7 @@ function playRound(){
     //result 0 means computer won, result 1 means player won, 2 is draw
     let result = 0
     console.log(computer)
+    console.log(player)
     switch (computer){
         case "Rock":
             if (player === "Paper"){
@@ -54,6 +55,7 @@ function playRound(){
                 result = 2
             }
             else result = 0 
+            break
         
         case "Paper":
             if (player === "Scissors"){
@@ -63,6 +65,7 @@ function playRound(){
                 result = 2
             } 
             else result = 0 
+            break
 
         case "Scissors":
             if(player === "Rock"){
@@ -72,6 +75,7 @@ function playRound(){
                 result = 2
             }
             else result = 0
+            break
 
     }
 
