@@ -39,4 +39,36 @@ function getPlayerChoice(){
 
 }
 
+function playRound(){
+    const computer=getCompChoice()
+    const player=getPlayerChoice()
+    //result 0 means computer won, result 1 means player won
+    let result = 0
+
+    switch (computer){
+        case "Rock":
+            if (player === "Paper"){
+                result = 1 
+            } 
+            else result = 0 
+        
+        case "Paper":
+            if (player === "Scissors"){
+                result = 1 
+            } 
+            else result = 0 
+
+        case "Scissors":
+            if(player === "Rock"){
+                result = 1
+            }
+            else result = 0
+
+    }
+
+    return result
+
+
+}
+
 
