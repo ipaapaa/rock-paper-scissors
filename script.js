@@ -94,19 +94,28 @@ function playGame(){
         switch (result){
             case 0: 
                 computerScore++
-                round++
+                console.log("Round: " + round)
+                console.log("Computer: " + computerScore)
+                console.log("Player: " + playerScore)
                 console.log("Computer wins the round!")
+                round++
                 break
 
             case 1: 
                 playerScore++
-                round++
+                console.log("Round: " + round)
+                console.log("Computer: " + computerScore)
+                console.log("Player: " + playerScore)
                 console.log("You win the round!")
+                round++
                 break
 
             case 2:
-                round++
-                console.log("Draw!") 
+                console.log("Round: " + round)
+                console.log("Computer: " + computerScore)
+                console.log("Player: " + playerScore)
+                console.log("Draw!")
+                round++ 
                 break
         }
 
@@ -115,5 +124,7 @@ function playGame(){
     
 
 }
+
+playGame()
 
 
