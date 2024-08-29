@@ -1,3 +1,6 @@
+playGame()
+
+
 function getCompChoice(){
 
     let compChoice = Math.floor(Math.random()*3)
@@ -88,43 +91,49 @@ function playGame(){
     let computerScore = 0
     let playerScore = 0
     let round = 1
+    console.log("Round: " + round)
 
-    while (computerScore < 3  || playerScore < 3 ){
-        let result = playRound()
+    while (computerScore < 3 || playerScore || 3 ){
+        let result  = playRound()
         switch (result){
             case 0: 
                 computerScore++
-                console.log("Round: " + round)
                 console.log("Computer: " + computerScore)
                 console.log("Player: " + playerScore)
                 console.log("Computer wins the round!")
                 round++
+                console.log("Round: " + round)
                 break
 
             case 1: 
                 playerScore++
-                console.log("Round: " + round)
                 console.log("Computer: " + computerScore)
                 console.log("Player: " + playerScore)
                 console.log("You win the round!")
                 round++
+                console.log("Round: " + round)
                 break
 
             case 2:
-                console.log("Round: " + round)
                 console.log("Computer: " + computerScore)
                 console.log("Player: " + playerScore)
                 console.log("Draw!")
                 round++ 
+                console.log("Round: " + round)
                 break
         }
 
     }
 
-    
+    if (computerScore > playerScore){
+        console.log("Computer wins the game!")
+    }
+    else{
+        console.log("Player wins the game!")
+    }
+
 
 }
 
-playGame()
 
 
