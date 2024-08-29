@@ -87,6 +87,10 @@ function playRound(){
 }
 
 function playGame(){
+    let play = true
+
+    do {
+
     let computerScore = 0
     let playerScore = 0
     let round = 1
@@ -94,31 +98,28 @@ function playGame(){
 
     while (computerScore < 3 && playerScore < 3 ){
         let result  = playRound()
+        console.log("Round: " + round)
+        console.log("Computer: " + computerScore)
+        console.log("Player: " + playerScore)
+        
         switch (result){
             case 0: 
                 computerScore++
-                console.log("Computer: " + computerScore)
-                console.log("Player: " + playerScore)
                 console.log("Computer wins the round!")
                 round++
-                console.log("Round: " + round)
+                
                 break
 
             case 1: 
                 playerScore++
-                console.log("Computer: " + computerScore)
-                console.log("Player: " + playerScore)
                 console.log("You win the round!")
                 round++
-                console.log("Round: " + round)
                 break
 
             case 2:
-                console.log("Computer: " + computerScore)
-                console.log("Player: " + playerScore)
                 console.log("Draw!")
                 round++ 
-                console.log("Round: " + round)
+
                 break
         }
 
@@ -131,10 +132,15 @@ function playGame(){
         console.log("Player wins the game!")
     }
 
+    let playAgain = prompt("Press [X] to exit. Press any button to play again.").toLowerCase()
+    
+    if (playAgain === 'x'){
+        play = false}
 
+  
+
+    } while (play === true)
 }
 
 playGame()
-
-
 
