@@ -21,10 +21,10 @@ function getPlayerChoice(){
     console.log("[0] Rock")
     console.log("[1] Paper")
     console.log("[2] Scissors")
-    
+    let invalidInput = false
+
+    do {
     let playerChoice = prompt("Enter your choice [number]:")
-    
-    
     
     switch (parseInt(playerChoice)){
         case 0:
@@ -35,8 +35,9 @@ function getPlayerChoice(){
             return 'Scissors';
         default:
             console.log("Invalid input, please try again.")
+            invalidInput = true
 
-    }
+    }} while (invalidInput == true)
 
 }
 
