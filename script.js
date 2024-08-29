@@ -45,8 +45,8 @@ function playRound(){
     const player=getPlayerChoice()
     //result 0 means computer won, result 1 means player won, 2 is draw
     let result = 0
-    console.log(computer)
-    console.log(player)
+    console.log("Computer: " + computer)
+    console.log("Player: " + player)
     switch (computer){
         case "Rock":
             if (player === "Paper"){
