@@ -17,9 +17,9 @@ function getCompChoice(){
 
 function getPlayerChoice(){
     
-    console.log("[1] Rock")
-    console.log("[2] Paper")
-    console.log("[3] Scissors")
+    console.log("[0] Rock")
+    console.log("[1] Paper")
+    console.log("[2] Scissors")
     
     let playerChoice = prompt("Enter your choice [number]:")
     
@@ -42,25 +42,34 @@ function getPlayerChoice(){
 function playRound(){
     const computer=getCompChoice()
     const player=getPlayerChoice()
-    //result 0 means computer won, result 1 means player won
+    //result 0 means computer won, result 1 means player won, 2 is draw
     let result = 0
-
+    console.log(computer)
     switch (computer){
         case "Rock":
             if (player === "Paper"){
                 result = 1 
             } 
+            else if (player === computer){
+                result = 2
+            }
             else result = 0 
         
         case "Paper":
             if (player === "Scissors"){
                 result = 1 
+            }
+            else if (player === computer){
+                result = 2
             } 
             else result = 0 
 
         case "Scissors":
             if(player === "Rock"){
                 result = 1
+            }
+            else if (player === computer){
+                result = 2
             }
             else result = 0
 
@@ -70,5 +79,7 @@ function playRound(){
 
 
 }
+
+console.log(playRound())
 
 
