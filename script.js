@@ -93,7 +93,7 @@ function playGame(){
     let round = 1
     console.log("Round: " + round)
 
-    while (computerScore < 3 || playerScore || 3 ){
+    while (computerScore < 3 || playerScore < 3 ){
         let result  = playRound()
         switch (result){
             case 0: 
