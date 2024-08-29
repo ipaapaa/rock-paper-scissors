@@ -84,6 +84,36 @@ function playRound(){
 
 }
 
-console.log(playRound())
+function playGame(){
+    let computerScore = 0
+    let playerScore = 0
+    let round = 1
+
+    while (computerScore < 3  || playerScore < 3 ){
+        let result = playRound()
+        switch (result){
+            case 0: 
+                computerScore++
+                round++
+                console.log("Computer wins the round!")
+                break
+
+            case 1: 
+                playerScore++
+                round++
+                console.log("You win the round!")
+                break
+
+            case 2:
+                round++
+                console.log("Draw!") 
+                break
+        }
+
+    }
+
+    
+
+}
 
 
