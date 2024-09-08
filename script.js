@@ -1,4 +1,4 @@
-
+console.log(document.head)
 function getCompChoice(){
 
     let compChoice = Math.floor(Math.random()*3)
@@ -15,7 +15,7 @@ function getCompChoice(){
     }
    
 }
-
+/*
 function getPlayerChoice(){
     
     console.log("[0] Rock")
@@ -85,7 +85,7 @@ function playRound(){
 
 
 }
-
+/*
 function playGame(){
     let play = true
 

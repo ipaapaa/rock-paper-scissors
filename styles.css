@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 1;
+    
+}
+
+.option{
+    margin: 3em;
+    padding: 1em 2em 1em 2em;
+    font-size: larger;
+    border-radius: 15px;
+    border: 2px solid black;
+    cursor: pointer;
+    
+}
+
+.option:hover{
+    border: 5px solid black;
+    font-size: larger;
+}
+.rock{
+    background-color: rgb(221, 162, 100);
+}
+
+.paper{
+    background-color: rgb(143, 227, 199);
+}
+
+.scissors{
+    background-color: rgb(224, 120, 120);
+}
