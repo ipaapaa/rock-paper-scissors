@@ -15,16 +15,26 @@ function getCompChoice(){
     }
    
 }
-/*
+
 function getPlayerChoice(){
-    
-    console.log("[0] Rock")
-    console.log("[1] Paper")
-    console.log("[2] Scissors")
-    let invalidInput = false
+    let playerChoice;
 
     do {
-    let playerChoice = prompt("Enter your choice [number]:")
+
+    const rock = document.querySelector(".rock");
+    rock.addEventListener("click",() => {
+        playerChoice = "Rock";
+    })
+
+    const paper = document.querySelector(".paper");
+    rock.addEventListener("click",() => {
+        playerChoice = "Paper";
+    })
+
+    const scissors = document.querySelector(".scissors");
+    rock.addEventListener("click",() => {
+        playerChoice = "Scissors";
+    })
     
     switch (parseInt(playerChoice)){
         case 0:
