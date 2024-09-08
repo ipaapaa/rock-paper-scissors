@@ -38,10 +38,7 @@ function getPlayerChoice(){
         console.log(playerChoice); //for checking
     })
 
-    do {
 
-   
-    
     switch (parseInt(playerChoice)){
         case 0:
             return 'Rock';
@@ -53,7 +50,7 @@ function getPlayerChoice(){
             console.log("Invalid input, please try again.")
             invalidInput = true
 
-    }} while (invalidInput == true)
+    }
 
 }
 
@@ -166,4 +163,4 @@ function playGame(){
 
 playGame()
 
-}
+})
