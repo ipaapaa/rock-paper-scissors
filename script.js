@@ -1,4 +1,4 @@
-console.log(document.head)
+document.addEventListener("DOMContentLoaded", () => {
 function getCompChoice(){
 
     let compChoice = Math.floor(Math.random()*3)
@@ -19,22 +19,28 @@ function getCompChoice(){
 function getPlayerChoice(){
     let playerChoice;
 
-    do {
-
     const rock = document.querySelector(".rock");
     rock.addEventListener("click",() => {
         playerChoice = "Rock";
+        console.log(playerChoice); //for checking
     })
 
     const paper = document.querySelector(".paper");
-    rock.addEventListener("click",() => {
+    paper.addEventListener("click",() => {
         playerChoice = "Paper";
+        console.log(playerChoice); //for checking
+
     })
 
     const scissors = document.querySelector(".scissors");
-    rock.addEventListener("click",() => {
+    scissors.addEventListener("click",() => {
         playerChoice = "Scissors";
+        console.log(playerChoice); //for checking
     })
+
+    do {
+
+   
     
     switch (parseInt(playerChoice)){
         case 0:
@@ -95,7 +101,7 @@ function playRound(){
 
 
 }
-/*
+
 function playGame(){
     let play = true
 
@@ -160,3 +166,4 @@ function playGame(){
 
 playGame()
 
+}
