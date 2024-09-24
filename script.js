@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+let PLAYERSCORE = 0;
+let COMPUTERSCORE = 0;
+
 function getCompChoice(){
 
     let compChoice = Math.floor(Math.random()*3)
@@ -99,50 +102,40 @@ function playRound(){
 
 }
 
-function playGame(){
-    let play = true
-
-    do {
-
+function playGame(roundResult){
+  
     let computerScore = 0
     let playerScore = 0
     let round = 1
    
-    console.log("Computer: " + computerScore)
-    console.log("Player: " + playerScore)
+    
 
     while (computerScore < 3 && playerScore < 3 ){
         console.log("Round: " + round)
-        let result  = playRound()
+        let result = roundResult;
        
 
         switch (result){
             case 0: 
                 computerScore++
-                console.log("Computer wins the round!")
                 round++
                 
                 break
 
             case 1: 
                 playerScore++
-                console.log("You win the round!")
                 round++
                 break
 
             case 2:
-                console.log("Draw!")
                 round++ 
 
                 break
         }
-        console.log("Computer: " + computerScore)
-        console.log("Player: " + playerScore)
 
     }
 
-    console.log("Computer: " + computerScore)
-    console.log("Player: " + playerScore)
+  
 
     if (computerScore > playerScore){
         console.log("Computer wins the game!")
