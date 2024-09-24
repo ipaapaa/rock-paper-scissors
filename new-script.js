@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 let PLAYERSCORE = 0;
 let COMPUTERSCORE = 0;
 let ROUND = 0;
+
     function getCompChoice(){
 
     let compChoice = Math.floor(Math.random()*3)
@@ -72,7 +73,7 @@ let ROUND = 0;
 
 
         if (COMPUTERSCORE == 5){
-            console.log("Computer wins the game!")
+            announcement("Computer wins the game!");
             COMPUTERSCORE = 0;
             PLAYERSCORE = 0;
             ROUND = 1;
@@ -80,7 +81,7 @@ let ROUND = 0;
             return;
         }
         else if(PLAYERSCORE == 5){
-            console.log("Player wins the game!")
+            announcement("Player wins the game!");
             COMPUTERSCORE = 0;
             PLAYERSCORE = 0;
             ROUND = 1;
@@ -94,18 +95,30 @@ let ROUND = 0;
 
         switch (result){
             case 0: //COMPWIN
+                announcement("Computer wins the round!");
                 COMPUTERSCORE++
                 ROUND++
+                changeComputerScore();
+                changeRound();
                 
                 break
 
             case 1: //PLAYERWIN
+                announcement("Player wins the round!");
                 PLAYERSCORE++
                 ROUND++
+                
+                changePlayerScore();
+                changeRound();
+
                 break
 
             case 2://DRAW
+                announcement("Draw!");
+
                 ROUND++ 
+                changeRound();
+
 
                 break
         }}
@@ -137,16 +150,29 @@ function getPlayerChoice(){
         playerChoice = "Scissors";
         result = playRound(playerChoice);
    
-        playGame(result);
+        playGame(result); })
+}
         
 
-    })
+    function changePlayerScore(){
+        const playerScore = document.querySelector(".player-score");
+        playerScore.textContent = PLAYERSCORE;
+    }
 
+    function changeComputerScore(){
+        const computerScore = document.querySelector(".computer-score");
+        computerScore.textContent = COMPUTERSCORE;
+    }
+
+    function changeRound(){
+        const round = document.querySelector(".round-number");
+        round.textContent=ROUND;
+    }
+    function announcement(announceThis){
+        const announcement = document.querySelector(".announcement");
+        announcement.textContent=announceThis;
+    }
     
-    
-}
-
-
 
 getPlayerChoice();
 
